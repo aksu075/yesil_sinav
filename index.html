@@ -2,210 +2,409 @@
 <html lang="tr" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0">
     
-    <title>Temel Özel Güvenlik Sınavı | Çıkmış Sorular ve Deneme Çöz</title>
-    <meta name="title" content="Temel Özel Güvenlik Sınavı | Çıkmış Sorular ve Deneme Çöz">
-    <meta name="description" content="Özel Güvenlik Temel Eğitim sınavlarına (100-118. Dönem) hazırlananlar için ücretsiz, reklamsız online soru çözüm platformu. Kendini test et, sınava hazırlan.">
-    <meta name="keywords" content="özel güvenlik sınavı, temel eğitim, güvenlik soruları, çıkmış sorular, online test, özel güvenlik deneme, silahlı güvenlik sınavı">
-    <meta name="robots" content="index, follow">
+    <title>Özel Güvenlik Sınav Rehberi | Çıkmış Sorular ve Puan Hesaplama (2024)</title>
+    <meta name="description" content="Özel Güvenlik Sınavı A'dan Z'ye Rehber: Puan hesaplama, silahsız ve silahlı sınav farkları, yenileme sınavı kuralları ve 100. dönemden günümüze tüm çıkmış sorular.">
+    <meta name="keywords" content="özel güvenlik sınavı puan hesaplama, 5188 sayılı kanun, silahlı güvenlik sınavı, silahsız güvenlik, ögg çıkmış sorular, güvenlik sertifikası yenileme">
+    <meta name="author" content="Özel Güvenlik Rehberi">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Özel Güvenlik Sınav Rehberi",
+      "description": "Özel Güvenlik Sınavlarına hazırlık ve bilgilendirme platformu.",
+      "applicationCategory": "EducationalApplication",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" }
+    }
+    </script>
+
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
                     fontFamily: { 'jakarta': ['"Plus Jakarta Sans"', 'sans-serif'] },
-                    animation: { 'fade-in': 'fadeIn 0.5s ease-out' },
-                    keyframes: { fadeIn: { '0%': { opacity: '0', transform: 'translateY(10px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } } }
+                    animation: { 
+                        'fade-in': 'fadeIn 0.4s ease-out',
+                        'bounce-slow': 'bounce 3s infinite'
+                    },
+                    keyframes: { 
+                        fadeIn: { '0%': { opacity: '0', transform: 'translateY(10px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } } 
+                    },
+                    colors: {
+                        brand: { 50: '#ecfdf5', 100: '#d1fae5', 500: '#10b981', 600: '#059669', 900: '#064e3b' }
+                    }
                 }
             }
         }
     </script>
-    
+
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .skip-link { position: absolute; top: -100%; left: 50%; transform: translateX(-50%); background: #22c55e; color: white; padding: 1rem; z-index: 9999; transition: top 0.3s; }
-        .skip-link:focus { top: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; -webkit-tap-highlight-color: transparent; }
+        .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(226, 232, 240, 0.8); }
+        .dark .glass-nav { background: rgba(15, 23, 42, 0.9); border-bottom: 1px solid rgba(51, 65, 85, 0.8); }
+        .question-card { min-height: 400px; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .dark ::-webkit-scrollbar-thumb { background: #475569; }
+        
         details > summary { list-style: none; }
         details > summary::-webkit-details-marker { display: none; }
-        .card-glow:hover { box-shadow: 0 0 20px rgba(34, 197, 94, 0.15); }
     </style>
 </head>
 
-<body class="min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 transition-colors duration-300 selection:bg-brand-500 selection:text-white">
 
-    <a href="#main-content" class="skip-link">İçeriğe Atla</a>
-
-    <header class="fixed top-0 w-full z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-2 cursor-pointer" onclick="App.goHome()">
-                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center text-white">
-                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+    <nav class="glass-nav fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2 cursor-pointer group" onclick="App.goHome()">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-500 to-emerald-600 flex items-center justify-center text-white shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
-                <span class="font-bold text-slate-800 dark:text-white tracking-tight">ÖzelGüvenlik<span class="text-emerald-600">Rehberi</span></span>
+                <span class="font-bold text-lg tracking-tight text-slate-900 dark:text-white">Güvenlik<span class="text-brand-600">Rehberi</span></span>
             </div>
             
-            <button id="themeToggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Tema Değiştir">
-                <span class="dark:hidden">🌙</span>
-                <span class="hidden dark:inline">☀️</span>
-            </button>
+            <div class="flex items-center gap-4">
+                <div id="user-mini-stats" class="hidden md:flex items-center gap-2 text-xs font-semibold bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-full text-slate-600 dark:text-slate-400">
+                    <span>🔥 <span id="nav-streak">0</span> Soru Çözüldü</span>
+                </div>
+                <button id="themeToggle" class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" aria-label="Karanlık Mod">
+                    <span class="dark:hidden">🌙</span>
+                    <span class="hidden dark:inline">☀️</span>
+                </button>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <main id="main-content" class="pt-24 pb-12 px-4 sm:px-6 lg:px-8 min-h-screen">
 
         <section id="landingScreen" class="max-w-5xl mx-auto animate-fade-in">
             
-            <div class="text-center py-16 sm:py-24">
-                <span class="inline-flex items-center px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 text-sm font-medium mb-6">
-                    🚀 100. Dönemden Günümüze Tüm Sorular
+            <div class="text-center py-12 sm:py-20 relative">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-lg h-64 bg-brand-500/20 blur-3xl rounded-full -z-10 dark:opacity-20"></div>
+                
+                <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-brand-600 dark:text-brand-400 text-xs font-bold shadow-sm mb-6 animate-bounce-slow">
+                    <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                    2024 Güncel Soru Bankası
                 </span>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6">
-                    Özel Güvenlik Sınavına <br class="hidden sm:block">
-                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-green-600">Ücretsiz Hazırlanın</span>
+                
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6 leading-tight">
+                    Özel Güvenlik Sınavını <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-emerald-400">Garantileyin</span>
                 </h1>
-                <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                    Emniyet Genel Müdürlüğü (EGM) resmi çıkmış sınav sorularını çözün, puanınızı hesaplayın ve eksiklerinizi görün. Reklamsız, hızlı ve %100 mobil uyumlu.
+                
+                <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                    EGM 5188 sayılı kanuna uygun, resmi çıkmış sorular ve akıllı analiz sistemi. Hem öğrenin, hem kendinizi test edin.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <button onclick="App.showSelection()" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-lg shadow-lg shadow-emerald-500/30 hover:scale-105 transition-all">
-                        Sınavları Görüntüle
+                    <button onclick="App.showSelection()" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-lg shadow-xl shadow-brand-500/20 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2">
+                        <span>Sınava Başla</span>
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
                     </button>
-                    <a href="#features" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">
-                        Platform Hakkında
-                    </a>
+                    <button id="resumeBtn" onclick="App.resumeLastExam()" class="hidden w-full sm:w-auto px-8 py-4 rounded-2xl bg-white dark:bg-slate-800 text-slate-700 dark:text-white font-bold border border-slate-200 dark:border-slate-700 hover:border-brand-500 transition-all flex items-center justify-center gap-2">
+                        <span class="text-brand-600">▶</span> Devam Et
+                    </button>
                 </div>
             </div>
 
-            <div id="features" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
-                <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm card-glow">
-                    <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-2xl mb-4">📚</div>
-                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Geniş Soru Arşivi</h3>
-                    <p class="text-slate-500 dark:text-slate-400">100. Dönemden 118. Döneme kadar tüm temel eğitim soruları.</p>
+            <div id="stats-dashboard" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-24">
+                <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm text-center">
+                    <div class="text-3xl font-bold text-brand-600 dark:text-brand-400" id="stat-total">0</div>
+                    <div class="text-xs text-slate-500 font-medium mt-1">Çözülen Soru</div>
                 </div>
-                <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm card-glow">
-                    <div class="w-12 h-12 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center text-2xl mb-4">⚡</div>
-                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Hızlı ve Odaklı</h3>
-                    <p class="text-slate-500 dark:text-slate-400">Reklam yok, bekleme yok. Sadece sorulara ve sınav sonucuna odaklanın.</p>
+                <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm text-center">
+                    <div class="text-3xl font-bold text-blue-500" id="stat-exams">0</div>
+                    <div class="text-xs text-slate-500 font-medium mt-1">Sınav Bitti</div>
                 </div>
-                <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm card-glow">
-                    <div class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl flex items-center justify-center text-2xl mb-4">📱</div>
-                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Her Yerde Çöz</h3>
-                    <p class="text-slate-500 dark:text-slate-400">Otobüste, evde, işte. Telefon ve tabletlerle %100 uyumlu arayüz.</p>
+                <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm text-center">
+                    <div class="text-3xl font-bold text-emerald-500" id="stat-correct">0</div>
+                    <div class="text-xs text-slate-500 font-medium mt-1">Doğru</div>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm text-center">
+                    <div class="text-3xl font-bold text-red-500" id="stat-wrong">0</div>
+                    <div class="text-xs text-slate-500 font-medium mt-1">Yanlış</div>
                 </div>
             </div>
 
-            <div class="max-w-3xl mx-auto mb-20">
-                <h2 class="text-2xl font-bold text-slate-900 dark:text-white text-center mb-8">Sıkça Sorulan Sorular</h2>
-                <div class="space-y-4">
-                    <details class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
-                        <summary class="flex items-center justify-between p-4 cursor-pointer font-medium text-slate-800 dark:text-white">
-                            Sınavda kaç soru soruluyor?
-                            <span class="transition-transform group-open:rotate-180">▼</span>
+            <article class="prose prose-slate dark:prose-invert max-w-none mb-24 bg-white dark:bg-slate-800/50 p-8 sm:p-12 rounded-3xl border border-slate-100 dark:border-slate-800">
+                <header class="mb-10 text-center">
+                    <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-4">Özel Güvenlik Sınavı Rehberi: A'dan Z'ye Bilinmesi Gerekenler</h2>
+                    <p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">Türkiye'de özel güvenlik sektörü, 5188 Sayılı Kanun çerçevesinde Emniyet Genel Müdürlüğü (EGM) tarafından denetlenmektedir. İşte sınav hakkında teknik detaylar ve başarı kriterleri.</p>
+                </header>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-600 flex items-center justify-center font-bold">1</span>
+                            <h3 class="text-xl font-bold text-slate-800 dark:text-white m-0">Silahsız Güvenlik Sınavı</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Ortaokul mezunu ve 18 yaşını doldurmuş adaylar içindir.</p>
+                        <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                            <li class="flex items-start gap-2"><span class="text-blue-500">•</span> <strong>Soru:</strong> 100 adet çoktan seçmeli.</li>
+                            <li class="flex items-start gap-2"><span class="text-blue-500">•</span> <strong>Süre:</strong> 120 dakika (2 saat).</li>
+                            <li class="flex items-start gap-2"><span class="text-blue-500">•</span> <strong>Geçme Notu:</strong> En az 60 puan (60 doğru).</li>
+                            <li class="flex items-start gap-2"><span class="text-blue-500">•</span> <strong>Not:</strong> Yanlışlar doğruları götürmez. Boş bırakmayın!</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/40 text-red-600 flex items-center justify-center font-bold">2</span>
+                            <h3 class="text-xl font-bold text-slate-800 dark:text-white m-0">Silahlı Güvenlik Sınavı</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Lise mezunu ve 21 yaşını doldurmuş adaylar içindir.</p>
+                        <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                            <li class="flex items-start gap-2"><span class="text-red-500">•</span> <strong>Yazılı:</strong> 100 Temel + 25 Silah sorusu.</li>
+                            <li class="flex items-start gap-2"><span class="text-red-500">•</span> <strong>Uygulama:</strong> 15 metreden 5 atış.</li>
+                            <li class="flex items-start gap-2"><span class="text-red-500">•</span> <strong>Süre:</strong> Toplam 150 dakika.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="my-10 p-6 bg-slate-50 dark:bg-slate-900 rounded-2xl border-l-4 border-brand-500">
+                    <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">🧮 Silahlı Sınav Puanı Nasıl Hesaplanır?</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Başarılı olmak için genel ortalamanın 60 olması gerekir. Örnek hesaplama:</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center text-sm">
+                        <div class="bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-200 dark:border-slate-700">
+                            <div class="font-bold text-slate-500">Temel Sınav</div>
+                            <div class="text-xl font-bold text-slate-800 dark:text-white">60 Puan</div>
+                        </div>
+                        <div class="bg-white dark:bg-slate-800 p-3 rounded-xl border border-slate-200 dark:border-slate-700">
+                            <div class="font-bold text-slate-500">Silah (Yazılı+Atış)</div>
+                            <div class="text-xl font-bold text-slate-800 dark:text-white">60 Puan</div>
+                        </div>
+                        <div class="bg-brand-500 p-3 rounded-xl text-white">
+                            <div class="font-bold opacity-90">Ortalama</div>
+                            <div class="text-xl font-bold">60 (GEÇTİ)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-10">
+                    <div>
+                        <h4 class="font-bold text-slate-900 dark:text-white mb-2">3. Yenileme Sınavları</h4>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Kimlik süresi (5 yıl) dolanlar girer. <strong>Bu sınavda kalma yoktur.</strong> Sınava girmek, kimliği uzatmak için yeterlidir.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 dark:text-white mb-2">4. Silah Farkı</h4>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Silahsızdan silahlıya geçiş yapanlar sadece 25 soru ve 5 atış yapar. Sadece bu kısmın ortalamasının 60 olması yeterlidir.</p>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 dark:bg-amber-900/10 p-6 rounded-2xl border border-amber-100 dark:border-amber-800/30">
+                    <h4 class="text-lg font-bold text-amber-800 dark:text-amber-400 mb-4 flex items-center gap-2">
+                        <span>🏆</span> Sınavda Başarının Altın Kuralları
+                    </h4>
+                    <ul class="grid sm:grid-cols-2 gap-4 text-sm text-amber-900 dark:text-amber-200">
+                        <li class="flex items-center gap-2">✅ <strong>Kanunu Bilin:</strong> 5188 Sayılı Kanun temeldir.</li>
+                        <li class="flex items-center gap-2">✅ <strong>Silah Bilgisi:</strong> Sökme-takma sıralaması banko sorudur.</li>
+                        <li class="flex items-center gap-2">✅ <strong>Boş Bırakmayın:</strong> Yanlış doğruyu götürmez.</li>
+                        <li class="flex items-center gap-2">✅ <strong>Sakin Olun:</strong> Atışta heyecan yapmayın.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <div id="faq-section" class="max-w-3xl mx-auto mb-20" itemscope itemtype="https://schema.org/FAQPage">
+                <h2 class="text-2xl font-bold text-center mb-2">Sıkça Sorulan Sorular</h2>
+                <p class="text-center text-slate-500 mb-8">Google'da en çok aranan soruların net cevapları</p>
+                
+                <div class="space-y-3">
+                    <details class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" open>
+                        <summary class="flex items-center justify-between p-5 cursor-pointer font-medium hover:bg-slate-50 dark:hover:bg-slate-750 transition-colors">
+                            <span itemprop="name">Özel güvenlik sınavında yanlış doğruyu götürür mü?</span>
+                            <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
                         </summary>
-                        <div class="p-4 pt-0 text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-700/50 mt-2">
-                            Temel eğitim sınavında adaylara 100 adet çoktan seçmeli soru sorulur. Silahlı adaylar için ayrıca 25 soruluk silah bilgisi testi bulunur.
+                        <div class="p-5 pt-0 text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 mt-2" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <span itemprop="text">Hayır, özel güvenlik sınavlarında yanlış cevaplar doğru cevapları götürmez (Net hesabı yapılmaz). Her doğru puan kazandırır, yanlışlar puan eksiltmez. Bu nedenle boş bırakmamanız önerilir.</span>
                         </div>
                     </details>
-                    <details class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
-                        <summary class="flex items-center justify-between p-4 cursor-pointer font-medium text-slate-800 dark:text-white">
-                            Geçme notu kaçtır?
-                            <span class="transition-transform group-open:rotate-180">▼</span>
+
+                    <details class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <summary class="flex items-center justify-between p-5 cursor-pointer font-medium hover:bg-slate-50 dark:hover:bg-slate-750 transition-colors">
+                            <span itemprop="name">Geçmek için kaç puan almak gerekir?</span>
+                            <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
                         </summary>
-                        <div class="p-4 pt-0 text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-700/50 mt-2">
-                            Sınavdan başarılı sayılmak için 100 üzerinden en az 60 puan almanız gerekmektedir. Yanlışlar doğruları götürmez.
+                        <div class="p-5 pt-0 text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 mt-2" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <span itemprop="text">Silahsız adaylar için 100 üzerinden en az <strong>60 puan</strong>. Silahlı adaylar için ise Temel Eğitim puanı ile Silah (Yazılı+Atış) puanı ortalamasının en az <strong>60</strong> olması gerekir.</span>
                         </div>
                     </details>
+
+                    <details class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <summary class="flex items-center justify-between p-5 cursor-pointer font-medium hover:bg-slate-50 dark:hover:bg-slate-750 transition-colors">
+                            <span itemprop="name">Silahlı sınavda atış yapamazsam ne olur?</span>
+                            <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 mt-2" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <span itemprop="text">Eğer hiç isabetli atış yapamazsanız (0 puan), yazılı sınavdan çok yüksek puan alarak ortalamayı 60'a tamamlamanız gerekir. Ortalama 60 olmazsa kalırsınız ancak "Silahsız" sertifika hakkınız saklı kalır.</span>
+                        </div>
+                    </details>
+
+                    <details class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <summary class="flex items-center justify-between p-5 cursor-pointer font-medium hover:bg-slate-50 dark:hover:bg-slate-750 transition-colors">
+                            <span itemprop="name">Sınav süresi kaç dakikadır?</span>
+                            <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 mt-2" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <span itemprop="text">Silahsız adaylar için sınav süresi <strong>120 dakika</strong> (2 saat), silahlı adaylar için ekstra 25 soru eklendiği için <strong>150 dakika</strong> (2.5 saat) sürmektedir.</span>
+                        </div>
+                    </details>
+
+                    <div id="extra-faqs" class="hidden space-y-3">
+                        <details class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <summary class="flex items-center justify-between p-5 cursor-pointer font-medium hover:bg-slate-50 dark:hover:bg-slate-750 transition-colors">
+                                <span itemprop="name">Yenileme sınavından kalırsam kimliğim iptal olur mu?</span>
+                                <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                            </summary>
+                            <div class="p-5 pt-0 text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 mt-2" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <span itemprop="text">Hayır. Yenileme sınavlarında "kalma" yoktur. Eğitimi tamamlayıp sınava girmeniz, kimliğinizin 5 yıl daha uzatılması için yeterlidir.</span>
+                            </div>
+                        </details>
+
+                        <details class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <summary class="flex items-center justify-between p-5 cursor-pointer font-medium hover:bg-slate-50 dark:hover:bg-slate-750 transition-colors">
+                                <span itemprop="name">Sınav sonuçları ne zaman açıklanır?</span>
+                                <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                            </summary>
+                            <div class="p-5 pt-0 text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 mt-2" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <span itemprop="text">Özel güvenlik sınav sonuçları genellikle sınav tarihinden itibaren <strong>3 hafta (21 gün)</strong> içinde EGM resmi sitesinde açıklanır.</span>
+                            </div>
+                        </details>
+
+                        <details class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <summary class="flex items-center justify-between p-5 cursor-pointer font-medium hover:bg-slate-50 dark:hover:bg-slate-750 transition-colors">
+                                <span itemprop="name">Bir sınavdan kalınca tekrar hepsine mi girilir?</span>
+                                <span class="text-slate-400 group-open:rotate-180 transition-transform">▼</span>
+                            </summary>
+                            <div class="p-5 pt-0 text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 mt-2" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <span itemprop="text">Hayır. Birbirini takip eden 4 sınav hakkınız vardır. Sadece sınav harcını yatırarak sonraki sınava girebilirsiniz. Eğitim tekrarına gerek yoktur.</span>
+                            </div>
+                        </details>
+                    </div>
+
+                    <button id="showMoreFaqBtn" onclick="App.toggleFaq()" class="w-full py-3 text-sm font-bold text-brand-600 dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-slate-800 rounded-xl transition-colors border border-dashed border-brand-200 dark:border-slate-700">
+                        Diğer Soruları Göster (+3)
+                    </button>
                 </div>
             </div>
-
-            <footer class="text-center text-slate-400 text-sm border-t border-slate-200 dark:border-slate-800 pt-8">
-                <p>&copy; 2024 Özel Güvenlik Sınav Rehberi. Tüm hakları saklıdır.</p>
+            
+            <footer class="text-center text-slate-400 text-xs py-8 border-t border-slate-200 dark:border-slate-800">
+                <p>&copy; 2024 Özel Güvenlik Rehberi. Bu site Emniyet Genel Müdürlüğü (EGM) ile resmi bağlantılı değildir.</p>
             </footer>
         </section>
 
-        <section id="selectionScreen" class="hidden max-w-4xl mx-auto animate-fade-in">
-            <div class="bg-white dark:bg-slate-800 rounded-3xl shadow-xl p-6 sm:p-8 lg:p-10 border border-slate-100 dark:border-slate-700">
-                <div class="flex items-center justify-between mb-8">
-                    <button onclick="App.goHome()" class="text-sm text-slate-500 hover:text-emerald-600 flex items-center gap-1">
-                        ← Ana Sayfaya Dön
-                    </button>
-                    <h2 class="text-xl font-bold text-slate-800 dark:text-white">Sınav Dönemleri</h2>
+        <section id="selectionScreen" class="hidden max-w-5xl mx-auto animate-fade-in">
+            <div class="mb-8 flex items-center gap-4">
+                <button onclick="App.goHome()" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-brand-500 transition-colors">←</button>
+                <div>
+                    <h2 class="text-2xl font-bold">Sınav Dönemi Seç</h2>
+                    <p class="text-sm text-slate-500">Çözmek istediğiniz çıkmış soruları seçin</p>
                 </div>
-
-                <div id="loadingState" class="text-center py-12">
-                    <div class="inline-block w-8 h-8 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin"></div>
-                    <p class="mt-4 text-slate-500">Dönemler yükleniyor...</p>
-                </div>
-                
-                <div id="errorState" class="hidden text-center py-12">
-                    <p class="text-red-500 mb-4">Veriler yüklenemedi.</p>
-                    <button onclick="App.loadData(true)" class="text-emerald-600 underline">Tekrar Dene</button>
-                </div>
-
-                <ul id="periodGrid" class="hidden grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
-                    </ul>
             </div>
+
+            <div id="loadingState" class="text-center py-20">
+                <div class="w-12 h-12 border-4 border-brand-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                <p class="text-slate-500">Sınav arşivi yükleniyor...</p>
+            </div>
+
+            <div id="errorState" class="hidden text-center py-20">
+                <div class="text-5xl mb-4">⚠️</div>
+                <p class="text-slate-600 dark:text-slate-400 mb-4">Veriler sunucudan çekilemedi.</p>
+                <button onclick="App.loadData(true)" class="text-brand-600 font-bold underline">Tekrar Dene</button>
+            </div>
+
+            <ul id="periodGrid" class="hidden grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            </ul>
         </section>
 
-        <section id="examScreen" class="hidden max-w-2xl mx-auto animate-fade-in">
-            <div class="bg-white dark:bg-slate-800 rounded-3xl shadow-xl overflow-hidden flex flex-col min-h-[500px] border border-slate-100 dark:border-slate-700">
-                <div class="h-1.5 bg-slate-100 dark:bg-slate-700">
-                    <div id="progressBar" class="h-full bg-emerald-500 transition-all duration-300" style="width: 0%"></div>
+        <section id="examScreen" class="hidden max-w-3xl mx-auto animate-fade-in">
+            <div class="fixed top-0 left-0 w-full h-1 z-[60]">
+                <div id="progressBar" class="h-full bg-brand-500 transition-all duration-300" style="width: 0%"></div>
+            </div>
+
+            <div class="bg-white dark:bg-slate-800 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800 overflow-hidden question-card flex flex-col">
+                <div class="px-6 py-4 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center bg-slate-50/50 dark:bg-slate-900/50 backdrop-blur-sm">
+                    <button onclick="App.showSelection()" class="text-xs font-bold text-slate-500 hover:text-red-500 transition-colors uppercase tracking-wider">✕ Çıkış</button>
+                    <div class="flex flex-col items-center">
+                        <span id="examHeading" class="font-bold text-sm sm:text-base"></span>
+                    </div>
+                    <span id="questionCounter" class="text-xs font-mono bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded-md font-bold">1/100</span>
                 </div>
 
-                <div class="px-6 py-4 border-b border-slate-100 dark:border-slate-700 flex justify-between items-center">
-                    <button onclick="App.showSelection()" class="text-slate-500 hover:text-slate-800 dark:hover:text-white text-sm font-medium">✕ Çık</button>
-                    <span id="examHeading" class="font-bold text-slate-800 dark:text-white"></span>
-                    <span id="questionCounter" class="text-xs text-slate-500 font-mono bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded">1/100</span>
-                </div>
-
-                <div class="flex-1 p-6 sm:p-8 overflow-y-auto">
-                    <span id="questionBadge" class="inline-block px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 text-xs font-bold mb-4">Soru 1</span>
-                    <h3 id="questionText" class="text-lg sm:text-xl font-medium text-slate-800 dark:text-white leading-relaxed mb-8"></h3>
-                    <ul id="choicesContainer" class="space-y-3"></ul>
+                <div class="flex-1 p-6 sm:p-10 overflow-y-auto">
+                    <div class="flex items-center justify-between mb-6">
+                        <span id="questionBadge" class="px-3 py-1 rounded-lg bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 text-xs font-bold">Soru 1</span>
+                        <button onclick="App.saveProgress()" class="text-xs text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">
+                            <span>💾 Kaydet</span>
+                        </button>
+                    </div>
                     
-                    <div id="feedbackMessage" class="hidden mt-6 p-4 rounded-xl">
-                        <p id="feedbackText" class="font-medium"></p>
+                    <h3 id="questionText" class="text-lg sm:text-xl font-medium leading-relaxed mb-8 text-slate-800 dark:text-slate-100"></h3>
+                    <ul id="choicesContainer" class="space-y-3"></ul>
+                    <div id="feedbackMessage" class="hidden mt-6 p-4 rounded-xl border animate-fade-in">
+                        <p id="feedbackText" class="font-bold text-sm"></p>
                     </div>
                 </div>
 
-                <div class="px-6 py-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-700 flex justify-between">
-                    <button id="prevBtn" class="px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg text-sm font-medium transition-colors disabled:opacity-50">Önceki</button>
-                    <button id="nextBtn" class="px-6 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-sm font-medium shadow-lg shadow-emerald-500/20 transition-all">Sonraki</button>
+                <div class="px-6 py-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex justify-between items-center">
+                    <button id="prevBtn" class="px-5 py-2.5 rounded-xl text-slate-600 dark:text-slate-400 font-bold text-sm hover:bg-white dark:hover:bg-slate-800 transition-all disabled:opacity-30">← Önceki</button>
+                    <button id="nextBtn" class="px-8 py-2.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold text-sm hover:scale-105 active:scale-95 transition-all shadow-lg">Sonraki →</button>
                 </div>
             </div>
         </section>
 
-        <section id="resultScreen" class="hidden max-w-lg mx-auto animate-fade-in text-center">
-            <div class="bg-white dark:bg-slate-800 rounded-3xl shadow-xl p-8 border border-slate-100 dark:border-slate-700">
-                <div id="resultIcon" class="w-24 h-24 mx-auto rounded-full flex items-center justify-center text-4xl mb-6"></div>
-                <h2 id="resultHeading" class="text-2xl font-bold text-slate-900 dark:text-white mb-2"></h2>
-                <div class="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-green-600 mb-8" id="scorePercentage"></div>
+        <section id="resultScreen" class="hidden max-w-xl mx-auto animate-fade-in text-center py-10">
+            <div class="bg-white dark:bg-slate-800 rounded-3xl shadow-2xl p-8 sm:p-12 border border-slate-100 dark:border-slate-700 relative overflow-hidden">
+                <div id="resultIcon" class="w-24 h-24 mx-auto rounded-full flex items-center justify-center text-5xl mb-6 shadow-xl"></div>
                 
-                <div class="grid grid-cols-3 gap-4 mb-8">
-                    <div class="p-3 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl">
-                        <div id="correctCount" class="text-xl font-bold text-emerald-600"></div>
-                        <div class="text-xs text-slate-500">Doğru</div>
-                    </div>
-                    <div class="p-3 bg-red-50 dark:bg-red-900/20 rounded-xl">
-                        <div id="wrongCount" class="text-xl font-bold text-red-500"></div>
-                        <div class="text-xs text-slate-500">Yanlış</div>
-                    </div>
-                    <div class="p-3 bg-slate-50 dark:bg-slate-700/50 rounded-xl">
-                        <div id="totalCount" class="text-xl font-bold text-slate-600 dark:text-slate-300"></div>
-                        <div class="text-xs text-slate-500">Toplam</div>
+                <h2 id="resultHeading" class="text-3xl font-bold mb-2"></h2>
+                <p id="resultSubtext" class="text-slate-500 mb-8">Sınav tamamlandı.</p>
+
+                <div class="relative w-48 h-48 mx-auto mb-8 flex items-center justify-center">
+                    <svg class="w-full h-full transform -rotate-90">
+                        <circle cx="96" cy="96" r="88" stroke="currentColor" stroke-width="12" fill="transparent" class="text-slate-100 dark:text-slate-700" />
+                        <circle id="scoreCircle" cx="96" cy="96" r="88" stroke="currentColor" stroke-width="12" fill="transparent" stroke-dasharray="552" stroke-dashoffset="552" class="text-brand-500 transition-all duration-1000 ease-out" />
+                    </svg>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center">
+                        <span class="text-5xl font-extrabold" id="scorePercentage">0%</span>
+                        <span class="text-xs font-bold text-slate-400 uppercase">Başarı</span>
                     </div>
                 </div>
 
-                <button onclick="App.showSelection()" class="w-full py-3 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-white font-medium hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors">Başka Sınav Seç</button>
+                <div class="grid grid-cols-3 gap-3 mb-8">
+                    <div class="p-3 bg-emerald-50 dark:bg-emerald-900/20 rounded-2xl border border-emerald-100 dark:border-emerald-900/30">
+                        <div id="correctCount" class="text-2xl font-bold text-emerald-600 dark:text-emerald-400">0</div>
+                        <div class="text-[10px] uppercase font-bold text-emerald-600/60">Doğru</div>
+                    </div>
+                    <div class="p-3 bg-red-50 dark:bg-red-900/20 rounded-2xl border border-red-100 dark:border-red-900/30">
+                        <div id="wrongCount" class="text-2xl font-bold text-red-500 dark:text-red-400">0</div>
+                        <div class="text-[10px] uppercase font-bold text-red-500/60">Yanlış</div>
+                    </div>
+                    <div class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-2xl border border-blue-100 dark:border-blue-900/30">
+                        <div id="totalCount" class="text-2xl font-bold text-blue-600 dark:text-blue-400">0</div>
+                        <div class="text-[10px] uppercase font-bold text-blue-600/60">Toplam</div>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <button onclick="App.showSelection()" class="w-full py-4 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold hover:scale-105 transition-transform shadow-lg">
+                        Başka Sınav Seç
+                    </button>
+                    <button onclick="App.retryExam()" class="w-full py-4 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-white font-bold hover:bg-slate-200 transition-colors">
+                        Tekrar Çöz
+                    </button>
+                </div>
             </div>
         </section>
 
@@ -213,36 +412,113 @@
 
     <script>
     const App = (function() {
-        const CONFIG = { DATA_URL: 'index.json' }; // JSON DOSYA ADI
-        const state = { data: null, currentPeriod: null, answers: {}, idx: 0 };
+        const CONFIG = { DATA_URL: 'sinav.json', PASS_SCORE: 60 };
+        let state = { data: null, currentPeriod: null, questions: [], answers: {}, idx: 0, stats: { totalSolved: 0, examsFinished: 0, totalCorrect: 0, totalWrong: 0 } };
         const els = {};
 
-        function getEls() {
-            ['landingScreen', 'selectionScreen', 'examScreen', 'resultScreen', 
-             'periodGrid', 'loadingState', 'errorState', 'progressBar', 
-             'examHeading', 'questionCounter', 'questionBadge', 'questionText', 
-             'choicesContainer', 'feedbackMessage', 'feedbackText', 'prevBtn', 'nextBtn',
-             'resultHeading', 'resultIcon', 'scorePercentage', 'correctCount', 'wrongCount', 'totalCount', 'themeToggle'
-            ].forEach(id => els[id] = document.getElementById(id));
+        function init() {
+            cacheEls();
+            loadLocalStats();
+            bindEvents();
+            checkResume();
+            updateStatsUI();
+            if(localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
         }
 
-        // Navigation Logic
+        function cacheEls() {
+            const ids = [
+                'landingScreen', 'selectionScreen', 'examScreen', 'resultScreen',
+                'periodGrid', 'loadingState', 'errorState',
+                'examHeading', 'questionCounter', 'progressBar', 'questionBadge', 'questionText', 'choicesContainer',
+                'prevBtn', 'nextBtn', 'feedbackMessage', 'feedbackText',
+                'resultHeading', 'resultSubtext', 'resultIcon', 'scorePercentage', 'scoreCircle',
+                'correctCount', 'wrongCount', 'totalCount',
+                'stat-total', 'stat-exams', 'stat-correct', 'stat-wrong', 'nav-streak', 'resumeBtn',
+                'extra-faqs', 'showMoreFaqBtn'
+            ];
+            ids.forEach(id => els[id] = document.getElementById(id));
+        }
+
+        // --- FAQ TOGGLE ---
+        function toggleFaq() {
+            els['extra-faqs'].classList.remove('hidden');
+            els['showMoreFaqBtn'].classList.add('hidden');
+        }
+
+        // --- LOCAL STORAGE & STATS ---
+        function loadLocalStats() {
+            const saved = localStorage.getItem('og_stats');
+            if(saved) state.stats = JSON.parse(saved);
+        }
+
+        function saveStats() {
+            localStorage.setItem('og_stats', JSON.stringify(state.stats));
+            updateStatsUI();
+        }
+
+        function updateStatsUI() {
+            els['stat-total'].innerText = state.stats.totalSolved;
+            els['stat-exams'].innerText = state.stats.examsFinished;
+            els['stat-correct'].innerText = state.stats.totalCorrect;
+            els['stat-wrong'].innerText = state.stats.totalWrong;
+            els['nav-streak'].innerText = state.stats.totalSolved;
+        }
+
+        function saveProgress() {
+            if(!state.currentPeriod) return;
+            const progress = {
+                donem: state.currentPeriod.donem_no,
+                answers: state.answers,
+                idx: state.idx,
+                date: new Date().getTime()
+            };
+            localStorage.setItem('og_current_progress', JSON.stringify(progress));
+        }
+
+        function checkResume() {
+            const saved = localStorage.getItem('og_current_progress');
+            if(saved) {
+                els.resumeBtn.classList.remove('hidden');
+                els.resumeBtn.classList.add('flex');
+            }
+        }
+
+        async function resumeLastExam() {
+            const saved = JSON.parse(localStorage.getItem('og_current_progress'));
+            if(!saved) return;
+            await showSelection(false); 
+            const period = state.data.find(d => d.donem_no === saved.donem);
+            if(period) {
+                state.currentPeriod = period;
+                state.questions = period.temel_egitim;
+                state.answers = saved.answers || {};
+                state.idx = saved.idx || 0;
+                showScreen('examScreen');
+                renderQuestion();
+                els.examHeading.innerText = `${period.donem_no}. Dönem (Devam)`;
+            }
+        }
+
+        // --- NAVIGATION ---
         function showScreen(screenId) {
-            ['landingScreen', 'selectionScreen', 'examScreen', 'resultScreen'].forEach(id => {
-                els[id].classList.add('hidden');
-            });
+            ['landingScreen', 'selectionScreen', 'examScreen', 'resultScreen'].forEach(id => els[id].classList.add('hidden'));
             els[screenId].classList.remove('hidden');
             window.scrollTo(0,0);
         }
 
-        function goHome() { showScreen('landingScreen'); }
-        
-        async function showSelection() {
-            showScreen('selectionScreen');
+        function goHome() { 
+            showScreen('landingScreen'); 
+            checkResume();
+        }
+
+        async function showSelection(render = true) {
+            if(render) showScreen('selectionScreen');
             if(!state.data) await loadData();
         }
 
-        // Data Logic
+        // --- DATA ---
         async function loadData() {
             try {
                 els.loadingState.classList.remove('hidden');
@@ -250,16 +526,15 @@
                 const res = await fetch(CONFIG.DATA_URL);
                 if(!res.ok) throw new Error();
                 state.data = await res.json();
-                
-                // Render Grid
                 const sorted = state.data.sort((a,b) => b.donem_no - a.donem_no);
                 els.periodGrid.innerHTML = sorted.map(p => `
-                    <li onclick="App.startExam(${p.donem_no})" class="cursor-pointer bg-slate-50 dark:bg-slate-700/50 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 border border-slate-200 dark:border-slate-600 hover:border-emerald-400 p-4 rounded-xl text-center transition-all group">
-                        <div class="text-2xl font-bold text-slate-700 dark:text-white group-hover:text-emerald-600">${p.donem_no}</div>
-                        <div class="text-xs text-slate-400">Dönem</div>
+                    <li onclick="App.startExam(${p.donem_no})" class="group cursor-pointer bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-brand-500 hover:shadow-lg hover:-translate-y-1 transition-all p-6 rounded-2xl text-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-brand-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="text-4xl font-black text-slate-800 dark:text-white mb-1 group-hover:text-brand-600 transition-colors">${p.donem_no}</div>
+                        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Dönem</div>
+                        <div class="mt-4 text-xs font-medium text-brand-600 bg-brand-50 dark:bg-brand-900/20 py-1 px-2 rounded-lg">100 Soru</div>
                     </li>
                 `).join('');
-                
                 els.loadingState.classList.add('hidden');
                 els.periodGrid.classList.remove('hidden');
             } catch(e) {
@@ -268,14 +543,15 @@
             }
         }
 
-        // Exam Logic
+        // --- EXAM LOGIC ---
         function startExam(donemNo) {
+            localStorage.removeItem('og_current_progress');
+            els.resumeBtn.classList.add('hidden');
             state.currentPeriod = state.data.find(d => d.donem_no === donemNo);
-            state.idx = 0;
-            state.answers = {};
             state.questions = state.currentPeriod.temel_egitim;
-            
-            els.examHeading.innerText = `${donemNo}. Dönem`;
+            state.answers = {};
+            state.idx = 0;
+            els.examHeading.innerText = `${donemNo}. Dönem Sınavı`;
             showScreen('examScreen');
             renderQuestion();
         }
@@ -283,9 +559,10 @@
         function renderQuestion() {
             const q = state.questions[state.idx];
             const total = state.questions.length;
+            const progress = ((state.idx + 1) / total) * 100;
             
-            els.progressBar.style.width = `${((state.idx + 1) / total) * 100}%`;
-            els.questionCounter.innerText = `${state.idx + 1} / ${total}`;
+            els.progressBar.style.width = `${progress}%`;
+            els.questionCounter.innerText = `${state.idx + 1}/${total}`;
             els.questionBadge.innerText = `Soru ${q.no}`;
             els.questionText.innerText = q.soru;
             
@@ -294,87 +571,91 @@
 
             els.choicesContainer.innerHTML = ['a','b','c','d','e'].map(opt => {
                 const upper = opt.toUpperCase();
-                let cls = "bg-white dark:bg-slate-700/30 border border-slate-200 dark:border-slate-600 hover:border-emerald-500";
+                let baseClass = "w-full flex text-left p-4 rounded-xl border-2 transition-all items-center gap-4 relative overflow-hidden";
+                let styleClass = "bg-white dark:bg-slate-700/30 border-slate-200 dark:border-slate-700 hover:border-brand-400 cursor-pointer";
+                let icon = `<div class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-600 flex items-center justify-center text-sm font-bold text-slate-600 dark:text-slate-300 transition-colors">${upper}</div>`;
                 
                 if(given) {
-                    if(upper === q.dogru_cevap) cls = "bg-emerald-100 dark:bg-emerald-900/50 border-emerald-500";
-                    else if(upper === given) cls = "bg-red-100 dark:bg-red-900/50 border-red-500";
-                    else cls = "opacity-50 border-slate-200";
+                    styleClass = "cursor-default opacity-60"; 
+                    if(upper === q.dogru_cevap) {
+                        styleClass = "bg-emerald-50 dark:bg-emerald-900/30 border-emerald-500 !opacity-100";
+                        icon = `<div class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-white">✓</div>`;
+                    } else if(upper === given) {
+                        styleClass = "bg-red-50 dark:bg-red-900/30 border-red-500 !opacity-100";
+                        icon = `<div class="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center text-white">✕</div>`;
+                    }
                 }
 
-                return `
-                <li onclick="App.answer('${upper}')" class="${given ? 'pointer-events-none' : 'cursor-pointer'} w-full flex text-left p-4 rounded-xl ${cls} transition-all items-center gap-3">
-                    <span class="w-8 h-8 flex-shrink-0 rounded-full bg-slate-100 dark:bg-slate-600 flex items-center justify-center text-sm font-bold text-slate-600 dark:text-slate-300">${upper}</span>
-                    <span class="text-slate-700 dark:text-slate-200 text-sm">${q[opt]}</span>
-                </li>`;
+                return `<li onclick="App.answer('${upper}')" class="${baseClass} ${styleClass}">${icon}<span class="text-slate-700 dark:text-slate-200 text-sm sm:text-base font-medium z-10">${q[opt]}</span></li>`;
             }).join('');
 
-            if(given) {
-                els.feedbackMessage.classList.remove('hidden');
-                const isCorrect = given === q.dogru_cevap;
-                els.feedbackMessage.className = `mt-6 p-4 rounded-xl ${isCorrect ? 'bg-emerald-50 text-emerald-700' : 'bg-red-50 text-red-700'}`;
-                els.feedbackText.innerText = isCorrect ? "Doğru Cevap!" : `Yanlış! Doğru cevap: ${q.dogru_cevap}`;
-            }
-
+            if(given) showFeedback(given === q.dogru_cevap, q.dogru_cevap);
             els.prevBtn.disabled = state.idx === 0;
             els.nextBtn.innerText = state.idx === total - 1 ? "Sınavı Bitir" : "Sonraki";
+            saveProgress();
         }
 
         function answer(choice) {
             const q = state.questions[state.idx];
             if(state.answers[q.no]) return;
             state.answers[q.no] = choice;
+            state.stats.totalSolved++;
+            if(choice === q.dogru_cevap) state.stats.totalCorrect++; else state.stats.totalWrong++;
+            saveStats();
             renderQuestion();
         }
 
+        function showFeedback(isCorrect, correctAns) {
+            els.feedbackMessage.classList.remove('hidden');
+            els.feedbackMessage.className = `mt-6 p-4 rounded-xl border animate-fade-in ${isCorrect ? 'bg-emerald-50 border-emerald-200 text-emerald-800' : 'bg-red-50 border-red-200 text-red-800'}`;
+            els.feedbackText.innerHTML = isCorrect ? `<span class="flex items-center gap-2">🎉 Tebrikler! Doğru cevap.</span>` : `<span class="flex items-center gap-2">⚠️ Yanlış. Doğru cevap: <strong>${correctAns}</strong></span>`;
+        }
+
         function next() {
-            if(state.idx < state.questions.length - 1) { state.idx++; renderQuestion(); }
-            else finish();
+            if(state.idx < state.questions.length - 1) { state.idx++; renderQuestion(); } else { finishExam(); }
         }
         
         function prev() {
             if(state.idx > 0) { state.idx--; renderQuestion(); }
         }
 
-        function finish() {
+        function finishExam() {
+            localStorage.removeItem('og_current_progress');
+            state.stats.examsFinished++;
+            saveStats();
             let correct = 0;
             const total = state.questions.length;
             Object.keys(state.answers).forEach(k => {
-                const q = state.questions.find(item => item.no == k);
+                const q = state.questions.find(i => i.no == k);
                 if(state.answers[k] === q.dogru_cevap) correct++;
             });
-            
             const score = Math.round((correct / total) * 100);
+            const passed = score >= CONFIG.PASS_SCORE;
+
             els.scorePercentage.innerText = `%${score}`;
+            els.scoreCircle.style.strokeDashoffset = 552 - (552 * score) / 100;
+            els.resultHeading.innerText = passed ? "Harika İş! 🎉" : "Biraz Daha Çalışmalısın";
+            els.resultSubtext.innerText = passed ? "Sınavı başarıyla geçtiniz." : "Barajın altında kaldınız.";
+            els.resultIcon.innerHTML = passed ? "🏆" : "📚";
+            els.resultIcon.className = `w-24 h-24 mx-auto rounded-full flex items-center justify-center text-5xl mb-6 shadow-xl ${passed ? 'bg-emerald-100 text-emerald-600' : 'bg-amber-100 text-amber-600'}`;
             els.correctCount.innerText = correct;
-            els.wrongCount.innerText = total - correct; // Boşlar dahil yanlış sayılıyor pratikte
+            els.wrongCount.innerText = total - correct;
             els.totalCount.innerText = total;
-            
-            els.resultHeading.innerText = score >= 60 ? "Tebrikler, Geçtiniz! 🎉" : "Maalesef Kaldınız 😔";
-            els.resultIcon.innerHTML = score >= 60 ? "🏆" : "📉";
-            els.resultIcon.className = `w-24 h-24 mx-auto rounded-full flex items-center justify-center text-4xl mb-6 ${score >= 60 ? 'bg-emerald-100' : 'bg-red-100'}`;
-            
             showScreen('resultScreen');
         }
 
-        function init() {
-            getEls();
-            
-            // Theme Logic
-            const savedTheme = localStorage.getItem('theme');
-            if(savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.documentElement.classList.add('dark');
-            }
-            els.themeToggle.onclick = () => {
+        function retryExam() { startExam(state.currentPeriod.donem_no); }
+
+        function bindEvents() {
+            els.prevBtn.onclick = prev;
+            els.nextBtn.onclick = next;
+            document.getElementById('themeToggle').onclick = () => {
                 document.documentElement.classList.toggle('dark');
                 localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
             };
-
-            els.nextBtn.onclick = next;
-            els.prevBtn.onclick = prev;
         }
 
-        return { init, goHome, showSelection, loadData, startExam, answer };
+        return { init, goHome, showSelection, loadData, startExam, answer, saveProgress, resumeLastExam, retryExam, toggleFaq };
     })();
 
     document.addEventListener('DOMContentLoaded', App.init);
