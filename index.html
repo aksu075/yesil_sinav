@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="tr" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <title>Temel Özel Güvenlik Sınavı | Çıkmış Sorular ve Deneme Çöz</title>
+    <meta name="title" content="Temel Özel Güvenlik Sınavı | Çıkmış Sorular ve Deneme Çöz">
+    <meta name="description" content="Özel Güvenlik Temel Eğitim sınavlarına (100-118. Dönem) hazırlananlar için ücretsiz, reklamsız online soru çözüm platformu. Kendini test et, sınava hazırlan.">
+    <meta name="keywords" content="özel güvenlik sınavı, temel eğitim, güvenlik soruları, çıkmış sorular, online test, özel güvenlik deneme, silahlı güvenlik sınavı">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { 'jakarta': ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    animation: { 'fade-in': 'fadeIn 0.5s ease-out' },
+                    keyframes: { fadeIn: { '0%': { opacity: '0', transform: 'translateY(10px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } } }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .skip-link { position: absolute; top: -100%; left: 50%; transform: translateX(-50%); background: #22c55e; color: white; padding: 1rem; z-index: 9999; transition: top 0.3s; }
+        .skip-link:focus { top: 0; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        .card-glow:hover { box-shadow: 0 0 20px rgba(34, 197, 94, 0.15); }
+    </style>
+</head>
+
+<body class="min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+
+    <a href="#main-content" class="skip-link">İçeriğe Atla</a>
+
+    <header class="fixed top-0 w-full z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="App.goHome()">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center text-white">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <span class="font-bold text-slate-800 dark:text-white tracking-tight">ÖzelGüvenlik<span class="text-emerald-600">Rehberi</span></span>
+            </div>
+            
+            <button id="themeToggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Tema Değiştir">
+                <span class="dark:hidden">🌙</span>
+                <span class="hidden dark:inline">☀️</span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content" class="pt-24 pb-12 px-4 sm:px-6 lg:px-8 min-h-screen">
+
+        <section id="landingScreen" class="max-w-5xl mx-auto animate-fade-in">
+            
+            <div class="text-center py-16 sm:py-24">
+                <span class="inline-flex items-center px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 text-sm font-medium mb-6">
+                    🚀 100. Dönemden Günümüze Tüm Sorular
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6">
+                    Özel Güvenlik Sınavına <br class="hidden sm:block">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-green-600">Ücretsiz Hazırlanın</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                    Emniyet Genel Müdürlüğü (EGM) resmi çıkmış sınav sorularını çözün, puanınızı hesaplayın ve eksiklerinizi görün. Reklamsız, hızlı ve %100 mobil uyumlu.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button onclick="App.showSelection()" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-lg shadow-lg shadow-emerald-500/30 hover:scale-105 transition-all">
+                        Sınavları Görüntüle
+                    </button>
+                    <a href="#features" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">
+                        Platform Hakkında
+                    </a>
+                </div>
+            </div>
+
+            <div id="features" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm card-glow">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-2xl mb-4">📚</div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Geniş Soru Arşivi</h3>
+                    <p class="text-slate-500 dark:text-slate-400">100. Dönemden 118. Döneme kadar tüm temel eğitim soruları.</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm card-glow">
+                    <div class="w-12 h-12 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center text-2xl mb-4">⚡</div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Hızlı ve Odaklı</h3>
+                    <p class="text-slate-500 dark:text-slate-400">Reklam yok, bekleme yok. Sadece sorulara ve sınav sonucuna odaklanın.</p>
+                </div>
+                <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm card-glow">
+                    <div class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl flex items-center justify-center text-2xl mb-4">📱</div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Her Yerde Çöz</h3>
+                    <p class="text-slate-500 dark:text-slate-400">Otobüste, evde, işte. Telefon ve tabletlerle %100 uyumlu arayüz.</p>
+                </div>
+            </div>
+
+            <div class="max-w-3xl mx-auto mb-20">
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white text-center mb-8">Sıkça Sorulan Sorular</h2>
+                <div class="space-y-4">
+                    <details class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+                        <summary class="flex items-center justify-between p-4 cursor-pointer font-medium text-slate-800 dark:text-white">
+                            Sınavda kaç soru soruluyor?
+                            <span class="transition-transform group-open:rotate-180">▼</span>
+                        </summary>
+                        <div class="p-4 pt-0 text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-700/50 mt-2">
+                            Temel eğitim sınavında adaylara 100 adet çoktan seçmeli soru sorulur. Silahlı adaylar için ayrıca 25 soruluk silah bilgisi testi bulunur.
+                        </div>
+                    </details>
+                    <details class="group bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+                        <summary class="flex items-center justify-between p-4 cursor-pointer font-medium text-slate-800 dark:text-white">
+                            Geçme notu kaçtır?
+                            <span class="transition-transform group-open:rotate-180">▼</span>
+                        </summary>
+                        <div class="p-4 pt-0 text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-700/50 mt-2">
+                            Sınavdan başarılı sayılmak için 100 üzerinden en az 60 puan almanız gerekmektedir. Yanlışlar doğruları götürmez.
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <footer class="text-center text-slate-400 text-sm border-t border-slate-200 dark:border-slate-800 pt-8">
+                <p>&copy; 2024 Özel Güvenlik Sınav Rehberi. Tüm hakları saklıdır.</p>
+            </footer>
+        </section>
+
+        <section id="selectionScreen" class="hidden max-w-4xl mx-auto animate-fade-in">
+            <div class="bg-white dark:bg-slate-800 rounded-3xl shadow-xl p-6 sm:p-8 lg:p-10 border border-slate-100 dark:border-slate-700">
+                <div class="flex items-center justify-between mb-8">
+                    <button onclick="App.goHome()" class="text-sm text-slate-500 hover:text-emerald-600 flex items-center gap-1">
+                        ← Ana Sayfaya Dön
+                    </button>
+                    <h2 class="text-xl font-bold text-slate-800 dark:text-white">Sınav Dönemleri</h2>
+                </div>
+
+                <div id="loadingState" class="text-center py-12">
+                    <div class="inline-block w-8 h-8 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin"></div>
+                    <p class="mt-4 text-slate-500">Dönemler yükleniyor...</p>
+                </div>
+                
+                <div id="errorState" class="hidden text-center py-12">
+                    <p class="text-red-500 mb-4">Veriler yüklenemedi.</p>
+                    <button onclick="App.loadData(true)" class="text-emerald-600 underline">Tekrar Dene</button>
+                </div>
+
+                <ul id="periodGrid" class="hidden grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
+                    </ul>
+            </div>
+        </section>
+
+        <section id="examScreen" class="hidden max-w-2xl mx-auto animate-fade-in">
+            <div class="bg-white dark:bg-slate-800 rounded-3xl shadow-xl overflow-hidden flex flex-col min-h-[500px] border border-slate-100 dark:border-slate-700">
+                <div class="h-1.5 bg-slate-100 dark:bg-slate-700">
+                    <div id="progressBar" class="h-full bg-emerald-500 transition-all duration-300" style="width: 0%"></div>
+                </div>
+
+                <div class="px-6 py-4 border-b border-slate-100 dark:border-slate-700 flex justify-between items-center">
+                    <button onclick="App.showSelection()" class="text-slate-500 hover:text-slate-800 dark:hover:text-white text-sm font-medium">✕ Çık</button>
+                    <span id="examHeading" class="font-bold text-slate-800 dark:text-white"></span>
+                    <span id="questionCounter" class="text-xs text-slate-500 font-mono bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded">1/100</span>
+                </div>
+
+                <div class="flex-1 p-6 sm:p-8 overflow-y-auto">
+                    <span id="questionBadge" class="inline-block px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 text-xs font-bold mb-4">Soru 1</span>
+                    <h3 id="questionText" class="text-lg sm:text-xl font-medium text-slate-800 dark:text-white leading-relaxed mb-8"></h3>
+                    <ul id="choicesContainer" class="space-y-3"></ul>
+                    
+                    <div id="feedbackMessage" class="hidden mt-6 p-4 rounded-xl">
+                        <p id="feedbackText" class="font-medium"></p>
+                    </div>
+                </div>
+
+                <div class="px-6 py-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-700 flex justify-between">
+                    <button id="prevBtn" class="px-4 py-2 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg text-sm font-medium transition-colors disabled:opacity-50">Önceki</button>
+                    <button id="nextBtn" class="px-6 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-sm font-medium shadow-lg shadow-emerald-500/20 transition-all">Sonraki</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="resultScreen" class="hidden max-w-lg mx-auto animate-fade-in text-center">
+            <div class="bg-white dark:bg-slate-800 rounded-3xl shadow-xl p-8 border border-slate-100 dark:border-slate-700">
+                <div id="resultIcon" class="w-24 h-24 mx-auto rounded-full flex items-center justify-center text-4xl mb-6"></div>
+                <h2 id="resultHeading" class="text-2xl font-bold text-slate-900 dark:text-white mb-2"></h2>
+                <div class="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-green-600 mb-8" id="scorePercentage"></div>
+                
+                <div class="grid grid-cols-3 gap-4 mb-8">
+                    <div class="p-3 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl">
+                        <div id="correctCount" class="text-xl font-bold text-emerald-600"></div>
+                        <div class="text-xs text-slate-500">Doğru</div>
+                    </div>
+                    <div class="p-3 bg-red-50 dark:bg-red-900/20 rounded-xl">
+                        <div id="wrongCount" class="text-xl font-bold text-red-500"></div>
+                        <div class="text-xs text-slate-500">Yanlış</div>
+                    </div>
+                    <div class="p-3 bg-slate-50 dark:bg-slate-700/50 rounded-xl">
+                        <div id="totalCount" class="text-xl font-bold text-slate-600 dark:text-slate-300"></div>
+                        <div class="text-xs text-slate-500">Toplam</div>
+                    </div>
+                </div>
+
+                <button onclick="App.showSelection()" class="w-full py-3 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-white font-medium hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors">Başka Sınav Seç</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+    const App = (function() {
+        const CONFIG = { DATA_URL: 'sinav.json' }; // JSON DOSYA ADI
+        const state = { data: null, currentPeriod: null, answers: {}, idx: 0 };
+        const els = {};
+
+        function getEls() {
+            ['landingScreen', 'selectionScreen', 'examScreen', 'resultScreen', 
+             'periodGrid', 'loadingState', 'errorState', 'progressBar', 
+             'examHeading', 'questionCounter', 'questionBadge', 'questionText', 
+             'choicesContainer', 'feedbackMessage', 'feedbackText', 'prevBtn', 'nextBtn',
+             'resultHeading', 'resultIcon', 'scorePercentage', 'correctCount', 'wrongCount', 'totalCount', 'themeToggle'
+            ].forEach(id => els[id] = document.getElementById(id));
+        }
+
+        // Navigation Logic
+        function showScreen(screenId) {
+            ['landingScreen', 'selectionScreen', 'examScreen', 'resultScreen'].forEach(id => {
+                els[id].classList.add('hidden');
+            });
+            els[screenId].classList.remove('hidden');
+            window.scrollTo(0,0);
+        }
+
+        function goHome() { showScreen('landingScreen'); }
+        
+        async function showSelection() {
+            showScreen('selectionScreen');
+            if(!state.data) await loadData();
+        }
+
+        // Data Logic
+        async function loadData() {
+            try {
+                els.loadingState.classList.remove('hidden');
+                els.periodGrid.classList.add('hidden');
+                const res = await fetch(CONFIG.DATA_URL);
+                if(!res.ok) throw new Error();
+                state.data = await res.json();
+                
+                // Render Grid
+                const sorted = state.data.sort((a,b) => b.donem_no - a.donem_no);
+                els.periodGrid.innerHTML = sorted.map(p => `
+                    <li onclick="App.startExam(${p.donem_no})" class="cursor-pointer bg-slate-50 dark:bg-slate-700/50 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 border border-slate-200 dark:border-slate-600 hover:border-emerald-400 p-4 rounded-xl text-center transition-all group">
+                        <div class="text-2xl font-bold text-slate-700 dark:text-white group-hover:text-emerald-600">${p.donem_no}</div>
+                        <div class="text-xs text-slate-400">Dönem</div>
+                    </li>
+                `).join('');
+                
+                els.loadingState.classList.add('hidden');
+                els.periodGrid.classList.remove('hidden');
+            } catch(e) {
+                els.loadingState.classList.add('hidden');
+                els.errorState.classList.remove('hidden');
+            }
+        }
+
+        // Exam Logic
+        function startExam(donemNo) {
+            state.currentPeriod = state.data.find(d => d.donem_no === donemNo);
+            state.idx = 0;
+            state.answers = {};
+            state.questions = state.currentPeriod.temel_egitim;
+            
+            els.examHeading.innerText = `${donemNo}. Dönem`;
+            showScreen('examScreen');
+            renderQuestion();
+        }
+
+        function renderQuestion() {
+            const q = state.questions[state.idx];
+            const total = state.questions.length;
+            
+            els.progressBar.style.width = `${((state.idx + 1) / total) * 100}%`;
+            els.questionCounter.innerText = `${state.idx + 1} / ${total}`;
+            els.questionBadge.innerText = `Soru ${q.no}`;
+            els.questionText.innerText = q.soru;
+            
+            const given = state.answers[q.no];
+            els.feedbackMessage.classList.add('hidden');
+
+            els.choicesContainer.innerHTML = ['a','b','c','d','e'].map(opt => {
+                const upper = opt.toUpperCase();
+                let cls = "bg-white dark:bg-slate-700/30 border border-slate-200 dark:border-slate-600 hover:border-emerald-500";
+                
+                if(given) {
+                    if(upper === q.dogru_cevap) cls = "bg-emerald-100 dark:bg-emerald-900/50 border-emerald-500";
+                    else if(upper === given) cls = "bg-red-100 dark:bg-red-900/50 border-red-500";
+                    else cls = "opacity-50 border-slate-200";
+                }
+
+                return `
+                <li onclick="App.answer('${upper}')" class="${given ? 'pointer-events-none' : 'cursor-pointer'} w-full flex text-left p-4 rounded-xl ${cls} transition-all items-center gap-3">
+                    <span class="w-8 h-8 flex-shrink-0 rounded-full bg-slate-100 dark:bg-slate-600 flex items-center justify-center text-sm font-bold text-slate-600 dark:text-slate-300">${upper}</span>
+                    <span class="text-slate-700 dark:text-slate-200 text-sm">${q[opt]}</span>
+                </li>`;
+            }).join('');
+
+            if(given) {
+                els.feedbackMessage.classList.remove('hidden');
+                const isCorrect = given === q.dogru_cevap;
+                els.feedbackMessage.className = `mt-6 p-4 rounded-xl ${isCorrect ? 'bg-emerald-50 text-emerald-700' : 'bg-red-50 text-red-700'}`;
+                els.feedbackText.innerText = isCorrect ? "Doğru Cevap!" : `Yanlış! Doğru cevap: ${q.dogru_cevap}`;
+            }
+
+            els.prevBtn.disabled = state.idx === 0;
+            els.nextBtn.innerText = state.idx === total - 1 ? "Sınavı Bitir" : "Sonraki";
+        }
+
+        function answer(choice) {
+            const q = state.questions[state.idx];
+            if(state.answers[q.no]) return;
+            state.answers[q.no] = choice;
+            renderQuestion();
+        }
+
+        function next() {
+            if(state.idx < state.questions.length - 1) { state.idx++; renderQuestion(); }
+            else finish();
+        }
+        
+        function prev() {
+            if(state.idx > 0) { state.idx--; renderQuestion(); }
+        }
+
+        function finish() {
+            let correct = 0;
+            const total = state.questions.length;
+            Object.keys(state.answers).forEach(k => {
+                const q = state.questions.find(item => item.no == k);
+                if(state.answers[k] === q.dogru_cevap) correct++;
+            });
+            
+            const score = Math.round((correct / total) * 100);
+            els.scorePercentage.innerText = `%${score}`;
+            els.correctCount.innerText = correct;
+            els.wrongCount.innerText = total - correct; // Boşlar dahil yanlış sayılıyor pratikte
+            els.totalCount.innerText = total;
+            
+            els.resultHeading.innerText = score >= 60 ? "Tebrikler, Geçtiniz! 🎉" : "Maalesef Kaldınız 😔";
+            els.resultIcon.innerHTML = score >= 60 ? "🏆" : "📉";
+            els.resultIcon.className = `w-24 h-24 mx-auto rounded-full flex items-center justify-center text-4xl mb-6 ${score >= 60 ? 'bg-emerald-100' : 'bg-red-100'}`;
+            
+            showScreen('resultScreen');
+        }
+
+        function init() {
+            getEls();
+            
+            // Theme Logic
+            const savedTheme = localStorage.getItem('theme');
+            if(savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+            els.themeToggle.onclick = () => {
+                document.documentElement.classList.toggle('dark');
+                localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+            };
+
+            els.nextBtn.onclick = next;
+            els.prevBtn.onclick = prev;
+        }
+
+        return { init, goHome, showSelection, loadData, startExam, answer };
+    })();
+
+    document.addEventListener('DOMContentLoaded', App.init);
+    </script>
+</body>
+</html>
