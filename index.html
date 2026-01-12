@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr" prefix="og: https://ogp.me/ns#">
 <head>
@@ -350,7 +351,7 @@
                         </button>
                     </div>
                     
-                    <h3 id="questionText" class="text-lg sm:text-xl font-medium leading-relaxed mb-8 text-slate-800 dark:text-slate-100"></h3>
+                    <div id="questionText" class="text-lg sm:text-xl font-medium leading-relaxed mb-8 text-slate-800 dark:text-slate-100"></div>
                     <ul id="choicesContainer" class="space-y-3"></ul>
                     <div id="feedbackMessage" class="hidden mt-6 p-4 rounded-xl border animate-fade-in">
                         <p id="feedbackText" class="font-bold text-sm"></p>
@@ -412,7 +413,7 @@
 
     <script>
     const App = (function() {
-        const CONFIG = { DATA_URL: 'sinav.json', PASS_SCORE: 60 };
+        const CONFIG = { DATA_URL: 'sinavlar.json', PASS_SCORE: 60 };
         let state = { data: null, currentPeriod: null, questions: [], answers: {}, idx: 0, stats: { totalSolved: 0, examsFinished: 0, totalCorrect: 0, totalWrong: 0 } };
         const els = {};
 
@@ -556,6 +557,68 @@
             renderQuestion();
         }
 
+
+
+// --- QUESTION TEXT RENDER (ROMAN LIST SUPPORT) ---
+function renderSoruMetni(container, soruText) {
+    container.innerHTML = "";
+    const text = String(soruText || "").trim().replace(/\s+/g, " ");
+
+    // Split before roman numerals like " I." " II." etc.
+    const parts = text.split(/\s(?=[IVXLCDM]{1,6}\.)/);
+
+    // No roman numerals -> render as plain text
+    if (parts.length === 1) {
+        const p = document.createElement("p");
+        p.className = "leading-relaxed";
+        p.textContent = text;
+        container.appendChild(p);
+        return;
+    }
+
+    // Intro sentence
+    const intro = parts[0].trim();
+    const pIntro = document.createElement("p");
+    pIntro.className = "leading-relaxed";
+    pIntro.textContent = intro;
+    container.appendChild(pIntro);
+
+    const items = parts.slice(1).filter(Boolean);
+    const allRoman = items.every(s => /^[IVXLCDM]{1,6}\./.test(s));
+    if (!allRoman) {
+        const p = document.createElement("p");
+        p.className = "leading-relaxed mt-2";
+        p.textContent = items.join(" ");
+        container.appendChild(p);
+        return;
+    }
+
+    const ul = document.createElement("ul");
+    ul.className = "mt-4 space-y-2 pl-3 border-l border-slate-200/70 dark:border-slate-700/60";
+    container.appendChild(ul);
+
+    items.forEach(line => {
+        const m = line.match(/^([IVXLCDM]{1,6}\.)\s*(.*)$/);
+        const roman = m ? m[1] : "";
+        const rest = m ? m[2] : line;
+
+        const li = document.createElement("li");
+        li.className = "flex gap-2 items-start";
+
+        const badge = document.createElement("span");
+        badge.className = "shrink-0 font-extrabold text-slate-700 dark:text-slate-200";
+        badge.textContent = roman;
+
+        const content = document.createElement("span");
+        content.className = "text-slate-700 dark:text-slate-200 leading-relaxed";
+        content.textContent = rest;
+
+        li.appendChild(badge);
+        li.appendChild(content);
+        ul.appendChild(li);
+    });
+}
+
         function renderQuestion() {
             const q = state.questions[state.idx];
             const total = state.questions.length;
@@ -564,7 +627,7 @@
             els.progressBar.style.width = `${progress}%`;
             els.questionCounter.innerText = `${state.idx + 1}/${total}`;
             els.questionBadge.innerText = `Soru ${q.no}`;
-            els.questionText.innerText = q.soru;
+            renderSoruMetni(els.questionText, q.soru);
             
             const given = state.answers[q.no];
             els.feedbackMessage.classList.add('hidden');
